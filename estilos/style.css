@@ -215,6 +215,7 @@ header a {
 
 .info .foto {
     width: 300px;
+    max-width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     overflow: hidden;
@@ -230,7 +231,7 @@ header a {
 }
 
 .info p {
-    text-align: justify;
+    text-align: center;
 }
 
 .info a {
