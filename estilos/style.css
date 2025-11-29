@@ -314,6 +314,11 @@ header a {
 }
 
 .product {
+    display: grid;
+    grid-template-rows: 70px auto auto 40px;
+    align-items: center;
+    justify-items: start;
+    gap: 10px;
 }
 
 .product h3 {
@@ -325,14 +330,10 @@ header a {
 
 .product img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
+    object-position: center center;
     border-radius: 8px;
-}
-
-.product p {
-    text-align: left;
-    margin-bottom: 1em;
 }
 
 .product a {
