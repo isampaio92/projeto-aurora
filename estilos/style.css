@@ -98,6 +98,7 @@ header a {
     align-items: center;
     text-align: center;
     padding: 20px;
+    padding-bottom: 30px;
     background-size: cover;
     background-position: center center;
     opacity: 0;
@@ -157,17 +158,17 @@ header a {
 
 .slide-img-1 {
     background-image: url('../imagens/aurora-pes.jpeg');
-    animation: slideCycle 15s infinite 0s;
+    animation: slideCycle 21s infinite 0s;
 }
 
 .slide-img-2 {
     background-image: url('../imagens/aurora-pensamento.jpeg');
-    animation: slideCycle 15s infinite 5s;
+    animation: slideCycle 21s infinite 7s;
 }
 
 .slide-img-3 {
     background-image: url('../imagens/aurora-prateleira.jpeg');
-    animation: slideCycle 15s infinite 10s;
+    animation: slideCycle 21s infinite 14s;
 }
 
 @keyframes slideCycle {
@@ -191,4 +192,29 @@ header a {
         opacity: 0; /* Continua invisível até o fim do ciclo */
         z-index: 0;
     }
+}
+
+.info {
+    background-color: var(--card-bg);
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.info .foto {
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    border:5px solid var(--card-bg);
+    outline:5px solid var(--primary-color) ;
+}
+
+.info h2 {
+    color: var(--text-secondary);
+    font-size: 1.7em;
 }
