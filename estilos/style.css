@@ -31,7 +31,7 @@ body {
 header {
     background-color: var(--primary-color);
     height: 80px;
-    padding: 0px 30px;
+    padding: 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -69,6 +69,7 @@ header a {
     align-items: center;
     height: 100%;
     padding: 0px 10px;
+    padding-top: 7px;
     border-bottom: 5px solid transparent;
     transition: background-color .3s, color .3s;
 }
