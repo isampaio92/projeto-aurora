@@ -314,8 +314,6 @@ header a {
 }
 
 .product {
-    display: grid;
-    grid-template-rows: 1fr 3fr 2.5fr .6fr;
 }
 
 .product h3 {
