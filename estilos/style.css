@@ -323,7 +323,6 @@ header a {
 
 .product h3 {
     color: var(--text-secondary);
-    margin-bottom: .5em;
     border-bottom: 2px solid var(--primary-color);
     font-variant: small-caps;
 }
