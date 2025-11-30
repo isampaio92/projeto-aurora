@@ -34,12 +34,24 @@ header {
     padding: 0px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
 header a {
     text-decoration: none;
     color: var(--text-primary);
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: block;
 }
 
 .logo {
@@ -55,29 +67,38 @@ header a {
 
 .menu ul {
     list-style: none;
-    display: flex;
-    height: 100%;
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    text-align: center;
+    border-top: 1px solid rgb(0, 0, 0, .3);
 }
 
 .menu li {
     height: 100%;
-    display: flex;
+    display: block;
 }
 
 .menu a {
-    display: flex;
+    display: block;
     align-items: center;
     height: 100%;
-    padding: 0px 10px;
-    padding-top: 7px;
-    border-bottom: 5px solid transparent;
+    padding: 15px;
+    border-bottom: 1px solid rgb(0, 0, 0, .3);
     transition: background-color .3s, color .3s;
 }
 
 .menu a:hover {
     background-color: var(--primary-hover);
     color: var(--text-inverse);
-    border-bottom:5px solid var(--text-primary);
+}
+
+.menu-checkbox:checked ~ ul {
+    display: flex;
 }
 
 .banner-slider {
@@ -186,19 +207,19 @@ header a {
         z-index: 0;
     }
     5% {
-        opacity: 1; /* Aparece rápido (fade in) */
-        z-index: 10; /* Traz para frente para o botão funcionar */
+        opacity: 1;
+        z-index: 10;
     }
     33% {
-        opacity: 1; /* Fica visível por 5 segundos (33% de 15s) */
+        opacity: 1;
         z-index: 10;
     }
     38% {
-        opacity: 0; /* Desaparece rápido (fade out) */
-        z-index: 0; /* Vai para o fundo */
+        opacity: 0;
+        z-index: 0;
     }
     100% {
-        opacity: 0; /* Continua invisível até o fim do ciclo */
+        opacity: 0;
         z-index: 0;
     }
 }
