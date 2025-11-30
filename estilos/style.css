@@ -424,6 +424,39 @@ header a {
     color: gray;
 }
 
+.footer-container {
+    background-color: var(--text-primary);
+    color: var(--text-inverse);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 50px;
+}
+
+.footer-container h4 {
+    border-bottom: 1px solid var(--text-inverse);
+    margin-bottom: .8em;
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: var(--text-inverse);
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+.footer-social ul {
+    display: flex;
+    gap: 5px;
+    font-size: 2em;
+}
+
 .copyright {
     background-color: var(--primary-color);
     color: var(--text-inverse);
