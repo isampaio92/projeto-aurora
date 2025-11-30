@@ -37,6 +37,7 @@ header {
     align-items: center;
     position: relative;
     z-index: 100;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, .3);
 }
 
 header a {
@@ -274,7 +275,6 @@ header a {
 .principal {
     margin: 20px auto;
     width: 90vw;
-    max-width: 900px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -455,7 +455,6 @@ header a {
 }
 
 .footer-container h4 {
-    border-bottom: 1px solid var(--text-inverse);
     margin-bottom: .8em;
 }
 
@@ -470,6 +469,15 @@ header a {
 
 .footer-container a:hover {
     text-decoration: underline;
+}
+
+.footer-aurora {
+    padding-left: 10px;
+    border-left: 1px solid var(--text-inverse);
+}
+.footer-merch {
+    padding-left: 10px;
+    border-left: 1px solid var(--text-inverse);
 }
 
 .footer-social ul {
@@ -493,4 +501,142 @@ header a {
 
 .copyright a:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        align-items: stretch;
+    }
+    
+    header.menu-checkbox, .menu-icon {
+        display: none;
+    }
+
+    .logo {
+        font-size: 2.7em;
+    }
+
+    .menu ul {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+        padding-bottom: 0px;
+        border: none;
+        height: 100%;
+    }
+
+    .menu li {
+        width: auto;
+        height: 100%;
+    }
+
+    .menu a {
+        padding: 0px 15px;
+        padding-top: 6px;
+        border-bottom: 5px solid transparent;
+        display: flex;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    .menu a:hover {
+        border-bottom: 5px solid var(--text-secondary);
+    }
+
+    .banner-slider {
+        height: 85vh;
+    }
+
+    .info {
+        display: grid;
+        grid-template: 60px 1fr 60px / 1fr 1fr 2fr;
+        justify-items: start;
+        align-items: center;
+        column-gap: 70px;
+    }
+
+    .info .foto {
+        grid-column: 3;
+        grid-row: 1 / -1;
+        border-radius: 8px;
+    }
+
+    .info h2 {
+        grid-column: 2;
+        justify-self: center;
+        border-bottom: 2px solid var(--primary-color);
+        padding: 10px;
+    }
+
+    .info p {
+        grid-column: 2;
+        text-align: center;
+    }
+
+    .info a {
+        grid-column: 2;
+        justify-self: center;
+    }
+
+    .principal {
+        display: grid;
+        grid-template: auto auto auto / 3fr 1fr;
+    }
+
+    .post {
+        grid-column: 1;
+    }
+
+    #artigo-3 {
+        grid-column: 1 / -1;
+    }
+
+    .post-figure img {
+        aspect-ratio: 16 / 9;
+        width: 60%;
+        margin: auto;
+    }
+
+    .post-figure figcaption {
+        width: 60%;
+        margin: auto;
+    }
+
+    .merch {
+        grid-column: 2;
+        grid-row: 1 / -2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .newsletter {
+        padding: 60px;
+    }
+
+    .footer-container {
+        display: grid;
+        padding: 60px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        gap: 0px;
+        justify-items: center;
+    }
+
+    .footer-aurora {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .footer-merch {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .footer-social {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
 }
